@@ -45,7 +45,7 @@ export default function HeroSection() {
       setActiveImg(idx);
     }, 1000);
     return () => clearInterval(id);
-  }, [activeImg]);
+  }, [activeImg, gallery.length]);
 
   const handlePick = (i) => {
     if (i !== activeImg) setActiveImg(i); // avoid re-setting
